@@ -1,0 +1,30 @@
+body {
+ /* start body required properties */
+  display: flex;
+  flex-direction: column;   
+  min-height: 100vh;
+  /* end body required properties */
+  margin: 0;
+}
+
+#main_content {
+    /* it will grow the entire main content and help push down the footer content at the very bottom */
+    flex-grow: 1;
+}
+
+#profile {  
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    filter: drop-shadow(0 0 2rem black);
+}
+
+#footer_content {
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+}
+
+.main_content_section {
+    height: 500px;
+}
