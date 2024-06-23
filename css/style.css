@@ -1,30 +1,46 @@
-body {
- /* start body required properties */
-  display: flex;
-  flex-direction: column;   
-  min-height: 100vh;
-  /* end body required properties */
+* {
   margin: 0;
+  padding: 0;
 }
 
-#main_content {
-    /* it will grow the entire main content and help push down the footer content at the very bottom */
-    flex-grow: 1;
+html {
+  scroll-behavior: smooth;
 }
 
-#profile {  
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    filter: drop-shadow(0 0 2rem black);
+body {
+  font-family: "Ubuntu Sans", sans-serif;
 }
 
-#footer_content {
-    display: flex;
-    min-height: 100px;
-    align-items: center;
+#profile {
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px gray;
 }
 
-.main_content_section {
-    height: 500px;
+.c-header {
+  border-bottom: 2px solid transparent;
+  transition: 200ms ease-in-out;
+}
+
+.c-header:hover {
+  border-color: gray;
+  font-weight: 700;
+}
+
+.img-hover:hover {
+  box-shadow: 0 0 6px 2px gray;
+}
+
+#btn {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: fit;
+}
+
+button {
+  border-radius: 50%;
 }
