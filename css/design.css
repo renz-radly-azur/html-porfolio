@@ -1,0 +1,314 @@
+/* general styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+p,
+address {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* header and navigation styles */
+header {
+  max-width: 900px;
+  margin-inline: auto;
+  border: 1px solid gray;
+  border-radius: 12px;
+}
+
+.header-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* navigation styles hover effect */
+.header-flex-container > li > a {
+  background-image: linear-gradient(to right, gray, gray 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-flex-container > li > a:before {
+  content: "";
+  background: gray;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-flex-container > li > a:hover {
+  background-position: 0;
+}
+
+.header-flex-container > li > a:hover::before {
+  width: 100%;
+}
+
+/* OUTER main content styles */
+main {
+  margin-top: 5px;
+  max-width: 900px;
+  margin-inline: auto;
+  /* border: 1px solid red; */
+}
+
+.section-flex-container {
+  min-height: 60vh;
+  margin: 5px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+#certificate {
+  min-height: 60vh;
+  margin: 5px;
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#project {
+  min-height: 60vh;
+  margin: 5px;
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* INNER main content styles */
+
+.section-flex-container > p,
+address {
+  margin-inline: 70px;
+}
+
+.section-flex-container > h1 {
+  text-align: center;
+}
+
+#profile {
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px gray;
+  height: 100px;
+  width: 100px;
+}
+
+#inner-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* border: 1px solid blue; */
+  margin: 5px;
+  padding: 5px;
+  gap: 5px;
+}
+
+#inner-project > * {
+  flex: 2;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+#inner-project-text {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-project-text > h3 {
+  text-align: center;
+}
+
+#inner-project > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#inner-certificate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* border: 1px solid blue; */
+  margin: 5px;
+  padding: 5px;
+  gap: 5px;
+}
+
+#inner-certificate > * {
+  flex: 2;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+#inner-certificate-text {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+#inner-certificate-text > h3 {
+  text-align: center;
+}
+
+#inner-certificate > a > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* buttons styles */
+#github {
+  display: inline-flex;
+  background-color: black;
+  color: white;
+  padding: 8px 10px;
+  border: 1px solid black;
+  vertical-align: baseline;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#github:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+#github-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+}
+
+#linkedin {
+  display: inline-flex;
+  background-color: #0077b5;
+  color: white;
+  padding: 8px 10px;
+  border: 1px solid #0077b5;
+  vertical-align: baseline;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#linkedin:hover {
+  background-color: white;
+  color: #0077b5;
+  border: 1px solid #0077b5;
+}
+
+#linkedin-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+}
+
+#resume {
+  display: inline-flex;
+  background-color: seagreen;
+  color: white;
+  padding: 8px 10px;
+  border: 1px solid seagreen;
+  vertical-align: baseline;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#resume:hover {
+  background-color: white;
+  color: seagreen;
+  border: 1px solid seagreen;
+}
+
+#resume-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+}
+
+#udemy {
+  display: inline-flex;
+  background-color: purple;
+  color: white;
+  padding: 8px 10px;
+  border: 1px solid purple;
+  vertical-align: baseline;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#udemy:hover {
+  background-color: white;
+  color: purple;
+  border: 1px solid purple;
+}
+
+#back-to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-weight: bolder;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  border: 1px solid black;
+}
+
+#back-to-top:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
